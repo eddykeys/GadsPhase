@@ -1,16 +1,27 @@
 package com.eddyonkeys.GadsProject.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Learner {
-        String name;
-        String hours;
-        String country;
-        String badgeUrl;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("hours")
+    @Expose
+    private Integer hours;
+    @SerializedName("country")
+    @Expose
+    private String country;
+    @SerializedName("badgeUrl")
+    @Expose
+    private String badgeUrl;
 
     public Learner() {
 
     }
 
-    public Learner(String name, String hours, String country, String badgeUrl) {
+    public Learner(String name, Integer hours, String country, String badgeUrl) {
         this.name = name;
         this.hours = hours;
         this.country = country;
@@ -25,11 +36,11 @@ public class Learner {
         this.name = name;
     }
 
-    public String getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 

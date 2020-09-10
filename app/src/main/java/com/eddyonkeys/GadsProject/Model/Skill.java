@@ -1,15 +1,26 @@
 package com.eddyonkeys.GadsProject.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Skill {
-    String name;
-    String score;
-    String country;
-    String badgeUrl;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("score")
+    @Expose
+    private Integer score;
+    @SerializedName("country")
+    @Expose
+    private String country;
+    @SerializedName("badgeUrl")
+    @Expose
+    private String badgeUrl;
 
     public Skill() {
     }
 
-    public Skill(String name, String score, String country, String badgeUrl) {
+    public Skill(String name, Integer score, String country, String badgeUrl) {
         this.name = name;
         this.score = score;
         this.country = country;
@@ -24,11 +35,11 @@ public class Skill {
         this.name = name;
     }
 
-    public String getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
