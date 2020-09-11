@@ -9,7 +9,7 @@ public class ApiProvider {
     private static final String BASE_URL = "https://gadsapi.herokuapp.com/";
 
     public static Retrofit getRetrofit() {
-        if (retrofit != null) {
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
