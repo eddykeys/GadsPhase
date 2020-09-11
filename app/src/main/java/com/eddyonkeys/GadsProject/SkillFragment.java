@@ -77,7 +77,6 @@ public class SkillFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_skill, container, false);
-        recyclerSkill = v.findViewById(R.id.recycler_skill);
         return v;
     }
 }
