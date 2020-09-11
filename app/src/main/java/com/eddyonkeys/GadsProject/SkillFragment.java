@@ -67,7 +67,7 @@ public class SkillFragment extends Fragment {
 
     private void generateDataSkill(List<Skill> body) {
         recyclerSkill=v.findViewById(R.id.recycler_skill);
-        mSkillRecyclerViewAdapter = new SkillRecyclerViewAdapter(skillList,this.getContext());
+        mSkillRecyclerViewAdapter = new SkillRecyclerViewAdapter(body,this.getContext());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerSkill.setLayoutManager(layoutManager);
         recyclerSkill.setAdapter(mSkillRecyclerViewAdapter);

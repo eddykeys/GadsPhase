@@ -65,7 +65,7 @@ public class LearnerFragment extends Fragment {
 
     private void generateDataLearner(List<Learner> body) {
         recyclerLearner=v.findViewById(R.id.recycler_learner);
-        adapter = new LearnerRecyclerViewAdapter(learnerList,this.getContext());
+        adapter = new LearnerRecyclerViewAdapter(body,this.getContext());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerLearner.setLayoutManager(layoutManager);
         recyclerLearner.setAdapter(adapter);
