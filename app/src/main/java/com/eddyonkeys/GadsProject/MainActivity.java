@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mViewPageAdapter);
         tabLayout.setupWithViewPager(mViewPager);
 
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

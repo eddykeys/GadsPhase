@@ -14,15 +14,16 @@ import com.bumptech.glide.Glide;
 import com.eddyonkeys.GadsProject.Model.Learner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LearnerRecyclerViewAdapter extends RecyclerView.Adapter<LearnerRecyclerViewAdapter.MyLearnerViewHolder> {
 
 //    member declarations
-    private ArrayList<Learner> learnerList;
+    private List<Learner> learnerList;
     private Context Context;
 
 
-    public LearnerRecyclerViewAdapter(ArrayList<Learner> learnerList, Context context) {
+    public LearnerRecyclerViewAdapter(List<Learner> learnerList, Context context) {
         this.learnerList = learnerList;
         this.Context = context;
     }

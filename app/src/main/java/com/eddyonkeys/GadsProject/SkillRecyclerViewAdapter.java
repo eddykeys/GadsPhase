@@ -15,15 +15,16 @@ import com.bumptech.glide.Glide;
 import com.eddyonkeys.GadsProject.Model.Skill;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SkillRecyclerViewAdapter extends RecyclerView.Adapter<SkillRecyclerViewAdapter.MySkillViewHolder>{
 
-    private ArrayList<Skill> skillList;
-    private Context mContext;
+    private List<Skill> skillList;
+    private Context Context;
 
-    public SkillRecyclerViewAdapter(ArrayList<Skill> skillList, Context context) {
+    public SkillRecyclerViewAdapter(List<Skill> skillList, Context context) {
         this.skillList = skillList;
-        mContext = context;
+        this.Context = context;
     }
 
     @NonNull
@@ -40,7 +41,7 @@ public class SkillRecyclerViewAdapter extends RecyclerView.Adapter<SkillRecycler
         holder.skillName.setText(skills.getName());
         holder.skillScore.setText(skills.getScore());
         holder.skillCountry.setText(skills.getCountry());
-        Glide.with(mContext).load(skills.getBadgeUrl()).into(holder.skillImage);
+        Glide.with(Context).load(skills.getBadgeUrl()).into(holder.skillImage);
 
     }
 
